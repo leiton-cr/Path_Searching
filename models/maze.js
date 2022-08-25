@@ -53,10 +53,10 @@ export default class Maze {
     constructor(searchType) {
         this.#intervalTime = 100
 
-        this.#walls = JSON.parse(localStorage.getItem("walls") || undefined) || JSON.parse(JSON.stringify(new Array(10).fill(new Array(10).fill(false))));
+        this.#walls = localStorage.getItem("walls") ? JSON.parse(localStorage.getItem("walls")) : JSON.parse(JSON.stringify(new Array(10).fill(new Array(10).fill(false))));
 
-        this.#start = JSON.stringify(localStorage.getItem("start") || undefined) || new Vector2({ row: 0, col: 0 });
-        this.#goal = JSON.stringify(localStorage.getItem("goal") || undefined) || new Vector2({ row: 9, col: 9 });
+        this.#start = new Vector2({ row: 0, col: 0 });
+        this.#goal = new Vector2({ row: 9, col: 9 });
 
         this.print()
 

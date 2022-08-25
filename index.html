@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<div>
+    <h1 class="title" data-title>Deep first search</h1>
+
+    <div class="maze__wrapper">
+
+        <div>
+            <div class="maze" data-maze></div>
+            <div class="info__container info__bottom">
+                ℹ️  Click en las casillas para agregar paredes.
+            </div>
+        </div>
+
+        <div class="maze__btn-container">
+            <button class="btn" data-search="Deep First Search">Deep First Search</button>
+            <button class="btn" data-search="Breadth First Search">Breadth First Search</button>
+            <button class="btn" data-search="Greedy Best First Search">Greedy Best First Search</button>
+            <button class="btn" data-search="A* Search">A* Search</button>
+
+            <div>
+                <div class="info__container">
+                    <div class="box start info"></div> Casilla de inicio
+                </div>
+                <div class="info__container">
+                    <div class="box goal info"></div> Casilla de fin
+                </div>
+                <div class="info__container">
+                    <div class="box empty info"></div> Casilla vacía
+                </div>
+                <div class="info__container">
+                    <div class="box wall info"></div> Casilla de pared
+                </div>
+                <div class="info__container">
+                    <div class="box visited info"></div> Casilla visitada
+                </div>
+                <div class="info__container">
+                    <div class="box solution info"></div> Casilla de solución
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="index.js" type="module"></script>
+
+    </body>
+
+</html>
