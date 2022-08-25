@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --clr-start:rgb(233, 20, 20);
+    --clr-goal:rgb(0, 165, 14);
+    --clr-solution:rgb(15, 37, 134);
+    --clr-visited:rgb(96, 97, 96);
+    --clr-empty:rgb(214, 213, 213);
+}
+
+html{
+    background-color: rgb(26, 26, 26);
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    user-select: none;
+    min-width: 4em;
+    min-height: 4em;
+    border: 1px dashed rgb(167, 167, 167);
+    transition: background-color .25s;
+}
+
+.box:hover{
+    transition: background-color .15s;
+    background-color: rgb(110, 5, 5);
+    border: 2px solid rgb(189, 7, 7);
+}
+
+.wall{
+    background-color: rgb(26, 26, 26);
+    color:var(--clr-empty);
+}
+
+.empty{
+    background-color: var(--clr-empty);
+}
+
+.visited{
+    background-color: var(--clr-visited);
+}
+
+.start, .goal, .solution{
+    background-color: var(--clr-solution);
+    line-height: 3.5em;
+    text-align: center;
+    color: var(--clr-empty)
+}
+
+.start{
+    background-color: var(--clr-start);
+}
+
+.goal{
+    background-color: var(--clr-goal);
+}
+
+.info__container{
+    color: var(--clr-empty);
+    user-select: none;
+}
+
+.info__bottom{
+    font-size: .8em;
+    text-align: center;
+    margin-top: 1em;
+}
+
+.info{
+    display: inline-block;
+    min-width: 1em;
+    min-height: 1em;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 1em 1em;
+    margin: 1em 0;
+    background-color: var(--clr-empty);
+    outline: none;
+    border: 2px solid transparent;
+    background-color: rgb(15, 37, 134);
+    color: var(--clr-empty);
+    transition: background-color .15s;
+    border-radius: .5em;
+}
+
+.btn:hover{
+    border: 2px solid var(--clr-empty);
+    background-color: rgb(26, 26, 26);
+}
+
+.title{
+    color: var(--clr-empty);
+}
+
+.maze__btn-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+}
+
+.maze__wrapper{
+    display: flex;
+}
